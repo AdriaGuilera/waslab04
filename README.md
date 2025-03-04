@@ -2,8 +2,8 @@
 
 Students:
 
-* Surname_1, First_name_1
+* Diaz, Iker
 
-* Surname_2, First_name_2
+* Guilera, Adria
 
 Your deployed webapp at Render|Heroku|... (task #6): <https://*********.***.***/>
