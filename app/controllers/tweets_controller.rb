@@ -1,6 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: %i[ show edit update destroy ]
-
+  before_action  :set_tweet, only: %i[ show edit update destroy like]
   # GET /tweets or /tweets.json
   def index
     @tweets = Tweet.order(created_at: :desc)
@@ -65,6 +64,19 @@ class TweetsController < ApplicationController
     end
   end
 
+  def like
+    @tweet.likes = @tweet.likes + 1
+    respond_to do |format|
+      if @tweet.save
+        format.html { redirect_to root_path, notice: "Tweet liked" }
+        format.json { render :show, status: :ok, location: @tweet }
+      else
+        format.html { redirect_to root_path, alert: "Failed to like tweet" }
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
@@ -73,6 +85,7 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.expect(tweet: [ :author, :content ])
+      params.expect(tweet: [ :author, :content, ])
     end
+
 end

@@ -7,6 +7,7 @@
 <div id="tweets">
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
+    <%= button_to 'Like this tweet', like_tweet_path(tweet), method: :put %>
     <p>
       <%= link_to "Show this tweet", tweet %>
     </p>
