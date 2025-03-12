@@ -1,9 +1,10 @@
 .tweetitem {
-    border: 2px solid #dfcaca;
+    border: 2px solid #E6B89C;
     margin: 20px auto;
     padding: 1em;
-    width: 90%;
+    width: 80%;
     background-color: white;
+    border-radius: 8px;
 }
 
 .tweetitem .likes {
@@ -15,8 +16,8 @@
 
 .tweetitem .likes .numlikes {
     font-weight: bold;
-    color: mediumvioletred;
     font-size: 1.5em;
+    color: #C0392B
 }
 
 .tweetitem .likes .smallfont {

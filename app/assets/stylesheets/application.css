@@ -1,48 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
-html {
-    display: block;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #444444;
-    background-color: #fef7f7;
+.wotbody {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4A4A4A;
+    background-color: #F8F4E3;
     font-size: 12pt;
+    margin: 0;
+    padding: 0
 }
 
-h1 {
+.heading {
+    text-align: center;
+    margin-top: 2em
+}
+
+.wottitle {
     color: #D35400;
     text-align: center;
     font-size: 2em;
     margin-top: 1.5em;
+    font-weight: bold
+}
+
+.walltweet {
+    color: #4A4A4A;
+    margin: 20px auto;
+    border: 2px dashed #A04000;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    border-radius: 8px
+}
+
+.wotitem {
+    border: 2px solid #E6B89C;
+    margin: 20px auto;
+    padding: 1em;
+    width: 80%;
+    background-color: white;
+    border-radius: 8px
+}
+
+.likes {
+    float: left;
+    width: 100px;
+    margin-top: 0.5em;
+    text-align: center
+}
+
+.numlikes {
     font-weight: bold;
+    color: #C0000;
+    font-size: 1.7em
+}
+
+.item {
+    border-left: 4px solid #E67E22;
+    margin-left: 120px;
+    padding-left: 1.1em
+}
+
+h2 {
+    color: #E67E22
 }
 
 h3 {
     font-weight: normal;
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    color: #A04000
 }
 
-.walltweet {
-    color: #4d5e9b;
-    margin: auto;
-    border: 1px dashed #660000;
-    padding-left: 20px;
-    padding-top: 20px;
-    background-color: white;
+.smallfont {
+    font-size: 10pt;
+    color: #8B4513
+}
+
+.login {
+    padding: 0.5em;
+    text-align: right;
+    font-size: 0.75em;
+    color: white;
+    font-weight: bold;
+    height: 1.5em;
+    background-color: #8B4513
+}
+
+form input[type="text"],form textarea {
     width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #E67E22;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+    color: #4A4A4A;
+    font-size: 14pt
+}
+
+form input[type="submit"] {
+    background-color: #C0392B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14pt
+}
+
+form input[type="submit"]:hover {
+    background-color: #A93226
 }

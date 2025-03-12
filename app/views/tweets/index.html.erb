@@ -1,11 +1,10 @@
 <% content_for :title, "Tweets" %>
 
-<center><h1>Wall of Tweets - RoR Edition</h1></center>
+<center><h1 class="wottitle">Wall of Tweets - RoR Edition</h1></center>
 <br>
 <div class="walltweet">
   <%= render 'form', tweet: Tweet.new %>
 </div>
-
 <% if notice %>
 <br>
 <div class="tweetitem" id="notice">
@@ -13,27 +12,21 @@
     <% notice.slice!(0) %>
     <span style="color: green;"><%= notice %></span>
   <% else %>
-    <span style="color: red;"><%= notice %></span>
+    <span style="color: green;"><%= notice %></span>
   <% end %>
 </div>
 <% end %>
-
-<div id="new-tweet">
-  <h2>Post a new tweet</h2>
-  <%= render "form", tweet: @tweet %>
-</div>
-
+<br>
 <div id="tweets">
   <% @actual_day = "" %>
   <% @tweets.each do |tweet| %>
    <% @tweeet_day = tweet.created_at.strftime("%A, %B %d, %Y") %>
     <% if @actual_day != @tweeet_day %>
     <h3>
-      ...... 
+      ......
       <%= @actual_day = @tweeet_day %>
     </h3>
   <% end %>
   <%= render tweet %>
-  <p><%= link_to "Show this tweet", tweet %></p>
   <% end %>
 </div>
